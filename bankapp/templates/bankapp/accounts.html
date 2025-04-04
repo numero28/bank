@@ -1,0 +1,13 @@
+{% extends "bankapp/base.html" %}
+
+{% block content %}
+<p>{{customer}}</p>
+
+{% for account in accounts %}
+<ul>
+    <li>{{account}}</li><br>
+{% empty %}
+    <li>There are no accounts added</li>
+<a href="{% url 'bankapp:new_account' %}"
+{% endfor %}
+{% endblock content %}

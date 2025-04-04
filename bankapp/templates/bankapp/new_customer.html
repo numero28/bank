@@ -1,0 +1,10 @@
+{% extends 'bankapp/base.html' %}
+
+{% block content %}
+
+<form action="{ url 'bankapp:new_customer' }" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button name="">Add</button>
+</form>
+{% endblock content %}
