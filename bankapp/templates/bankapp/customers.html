@@ -1,0 +1,14 @@
+{% extends 'bankapp/base.html' %}
+
+{% block content%}
+<p>Customers: </p>
+{% for customer in customers %}
+<ul>
+    <li>
+        <a href="{% url 'bankapp:accounts' customer.id %}">{{customer}}</a>
+    </li>
+</ul>
+{% empty %}
+<li>There are no customers</li>
+{% endfor %}
+{% endblock content %}

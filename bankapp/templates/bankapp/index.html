@@ -1,0 +1,12 @@
+{% extends "bankapp/base.html" %}
+
+{% block content%}
+<h1 class="text-center">WELCOME TO THE BANK APP</h1><br>
+<div class="mt-4 alert alert-info">
+    <ul>
+        <li>
+            <p><strong><a href="{% url 'bankapp:customers' %}"> BMI calculator</a> </strong></p>    
+       </li>
+    </ul>    
+    
+</div>{% endblock content %}
